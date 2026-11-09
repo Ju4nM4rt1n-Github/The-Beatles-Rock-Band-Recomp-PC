@@ -1,5 +1,9 @@
 The Beatles: Rock Band — Decompilation
 
+This is the original proyect that i used to make this version: https://github.com/mercurialw0rld/thebeatlesrockband-pcport
+
+¡Thank you to Mercurialw0rld for this decomp!
+
 A complete, fully functional decompilation of **The Beatles: Rock Band**, reconstructed from the original game binary into readable, buildable source code.
 
 The result is a working build with full feature parity: every instrument, every vocal input, and every game mode behaves exactly like the original release.
