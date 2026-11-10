@@ -4,7 +4,9 @@ This is the original proyect that i used to make this version: https://github.co
 
 ¡Thank you to Mercurialw0rld for this decomp!
 
-A complete, fully functional decompilation of **The Beatles: Rock Band**, reconstructed from the original game binary into readable, buildable source code.
+This was made with VibeCoding, i'm not an expert but a videogames fan, so this is my little contribution for us, the gamers.
+
+This is a complete, fully functional decompilation of **The Beatles: Rock Band**, reconstructed from the original game binary into readable, buildable source code.
 
 The result is a working build with full feature parity: every instrument, every vocal input, and every game mode behaves exactly like the original release.
 
