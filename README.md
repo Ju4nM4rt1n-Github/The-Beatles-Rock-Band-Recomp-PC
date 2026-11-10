@@ -39,6 +39,8 @@ The result is a working build with full feature parity: every instrument, every 
 2. Provide your own legally obtained copy of the game's data files (see `docs/SETUP.md`).
 3. Follow the build instructions for your platform in `docs/BUILDING.md`.
 
+If you need help to install it: https://youtu.be/4QnA58zQAQA
+
 ## Legal Notice
 
 This project contains **no copyrighted assets**. No game data, audio, charts, or artwork are included or distributed. You must supply your own legally obtained copy of the game to use this project.
