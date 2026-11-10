@@ -46,6 +46,7 @@ This project is not affiliated with, endorsed by, or sponsored by Harmonix, MTV 
 ## Contributing
 
 Contributions are welcome. Please open an issue to discuss major changes before submitting a pull request.
+If you have suggestion, contact me at jmvihd2@gmail.com.
 
 ## License
 
