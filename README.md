@@ -1,22 +1,24 @@
-The Beatles: Rock Band — Decompilation
+<img width="1100" height="500" alt="image" src="https://github.com/user-attachments/assets/38116ea6-d1b3-4f14-9774-4cec3e1f893a" />
 
-This is the original proyect that i used to make this version: https://github.com/mercurialw0rld/thebeatlesrockband-pcport
+# The Beatles: Rock Band — Decompilation
 
-¡Thank you to Mercurialw0rld for this decomp!
-
-This was made with VibeCoding, i'm not an expert but a videogames fan, so this is my little contribution for us, the gamers.
-
-This is a complete, fully functional decompilation of **The Beatles: Rock Band**, reconstructed from the original game binary into readable, buildable source code.
+A complete, fully functional decompilation of **The Beatles: Rock Band**, reconstructed from the original game binary into readable, buildable source code.
 
 The result is a working build with full feature parity: every instrument, every vocal input, and every game mode behaves exactly like the original release.
 
+## Credits
+
+This version is based on the original project by **Mercurialw0rld**: [thebeatlesrockband-pcport](https://github.com/mercurialw0rld/thebeatlesrockband-pcport). Thank you, Mercurialw0rld, for this decomp!
+
+This version was made with *VibeCoding*. I'm not an expert, just a videogame fan, and this is my little contribution to all of us gamers.
+
 ## Features
 
-- **Full instrument support** — guitar, bass, and drums work flawlessly with accurate note detection, timing, and scoring.
-- **Microphone support** — vocal input is fully functional, including pitch detection and harmony scoring for the three-part vocal sections.
-- **Complete gameplay** — Story Mode, Quickplay, and multiplayer all run correctly with no missing features or known crashes.
-- **Accurate behavior** — game logic, menus, and audio sync match the original behavior.
-- **Clean, readable code** — organized, documented source that is easy to browse, build, and extend.
+- **Full instrument support**: guitar, bass, and drums work flawlessly with accurate note detection, timing, and scoring.
+- **Microphone support**: vocal input is fully functional, including pitch detection and harmony scoring for the three-part vocal sections.
+- **Complete gameplay**: Story Mode, Quickplay, and multiplayer all run correctly with no missing features or known crashes.
+- **Accurate behavior**: game logic, menus, and audio sync match the original behavior.
+- **Clean, readable code**: organized, documented source that is easy to browse, build, and extend.
 
 ## System Requirements
 
@@ -29,7 +31,7 @@ The result is a working build with full feature parity: every instrument, every 
 | **Storage** | Disk with enough free space | SSD recommended |
 
 > The port was tested on an RTX 3050 Laptop. The graphics cards listed are approximate examples; performance also depends on the processor, resolution, and song.
->
+
 ## Dolby Digital (Experimental)
 
 To use it, you need:
@@ -38,28 +40,28 @@ To use it, you need:
 - A TV or receiver that can receive AC-3 over HDMI and pass it on to the sound system. If the connection uses ARC, the TV must allow Dolby Digital passthrough.
 - **Dolby Digital (Experimental)** enabled in the launcher.
 
-- ## Status
+## Status
 
-| Component         | Status     |
-|-------------------|------------|
-| Guitar / Bass     | ✅ Working |
-| Drums             | ✅ Working |
-| Vocals / Mic      | ✅ Working |
-| Audio engine      | ✅ Working |
-| Menus & UI        | ✅ Working |
-| Full playthrough  | ✅ Working |
+| Component | Status |
+|-----------|--------|
+| Guitar / Bass | ✅ Working |
+| Drums | ✅ Working |
+| Vocals / Mic | ✅ Working |
+| Audio engine | ✅ Working |
+| Menus & UI | ✅ Working |
+| Full playthrough | ✅ Working |
 
 ## Building
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/<repo-name>.git
-   cd <repo-name>
+   git clone https://github.com/Ju4nM4rt1n-Github/The-Beatles-Rock-Band-Recomp-PC.git
+   cd The-Beatles-Rock-Band-Recomp-PC
    ```
 2. Provide your own legally obtained copy of the game's data files (see `docs/SETUP.md`).
 3. Follow the build instructions for your platform in `docs/BUILDING.md`.
 
-If you need help to install it: https://youtu.be/4QnA58zQAQA
+Need help installing it? Watch the [installation video](https://youtu.be/4QnA58zQAQA).
 
 ## Legal Notice
 
@@ -69,9 +71,8 @@ This project is not affiliated with, endorsed by, or sponsored by Harmonix, MTV 
 
 ## Contributing
 
-Contributions are welcome. Please open an issue to discuss major changes before submitting a pull request.
-If you have suggestion, contact me at jmvihd2@gmail.com.
+Contributions are welcome. Please open an issue to discuss major changes before submitting a pull request. If you have a suggestion, you can contact me at jmvihd2@gmail.com.
 
 ## License
 
-Game assets remain the property of their respective owners. Use an original copy to play the game.
+Game assets remain the property of their respective owners. Please use an original copy of the game to play.
