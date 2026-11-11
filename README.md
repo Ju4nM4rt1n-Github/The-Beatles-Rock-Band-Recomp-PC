@@ -20,6 +20,18 @@ The result is a working build with full feature parity: every instrument, every 
 
 ## Status
 
+## System Requirements
+
+| Component | Minimum | Recommended |
+|-----------|---------|-------------|
+| **OS** | 64-bit Windows 10/11 | 64-bit Windows 11 |
+| **Processor** | Intel Core i5 8th gen or AMD Ryzen 5 2600 | Intel Core i5 10th gen or AMD Ryzen 5 3600, or better |
+| **RAM** | 8 GB | 16 GB |
+| **Graphics** | NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 (Direct3D 12 compatible) | NVIDIA GeForce GTX 1660 / RTX 2060 or AMD Radeon RX 6600, or better |
+| **Storage** | Disk with enough free space | SSD recommended |
+
+> The port was tested on an RTX 3050 Laptop. The graphics cards listed are approximate examples; performance also depends on the processor, resolution, and song.
+
 | Component         | Status     |
 |-------------------|------------|
 | Guitar / Bass     | ✅ Working |
