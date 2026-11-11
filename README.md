@@ -18,8 +18,6 @@ The result is a working build with full feature parity: every instrument, every 
 - **Accurate behavior** — game logic, menus, and audio sync match the original behavior.
 - **Clean, readable code** — organized, documented source that is easy to browse, build, and extend.
 
-## Status
-
 ## System Requirements
 
 | Component | Minimum | Recommended |
@@ -31,6 +29,16 @@ The result is a working build with full feature parity: every instrument, every 
 | **Storage** | Disk with enough free space | SSD recommended |
 
 > The port was tested on an RTX 3050 Laptop. The graphics cards listed are approximate examples; performance also depends on the processor, resolution, and song.
+>
+## Dolby Digital (Experimental)
+
+To use it, you need:
+
+- An HDMI audio output whose driver and device support Dolby Digital/AC-3 at 48 kHz.
+- A TV or receiver that can receive AC-3 over HDMI and pass it on to the sound system. If the connection uses ARC, the TV must allow Dolby Digital passthrough.
+- **Dolby Digital (Experimental)** enabled in the launcher.
+
+- ## Status
 
 | Component         | Status     |
 |-------------------|------------|
