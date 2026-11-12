@@ -1,0 +1,43 @@
+# Local game paths and all recompiled/disassembled game output
+beatlesrockband_manifest.local.toml
+generated/
+game/
+!game/
+!game/.gitkeep
+*.xex
+*.ark
+*.hdr
+*.zbm
+*.iso
+*.xiso
+*.bin
+
+# Dependencies, native builds and packaged applications
+external/
+out/
+build/
+build-*/
+CMakeUserPresets.json
+CMakeCache.txt
+CMakeFiles/
+*.exe
+*.dll
+*.obj
+*.lib
+*.pdb
+*.ilk
+*.zip
+
+# Player data and local diagnostics
+userdata/
+cache/
+logs/
+launcher-settings.json
+launcher-settings.json.tmp
+*.log
+*.dmp
+__pycache__/
+*.lnk
+*.pyc
+.vs/
+.idea/

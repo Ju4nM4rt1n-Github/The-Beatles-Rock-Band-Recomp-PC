@@ -1,0 +1,12 @@
+{
+  "name": "beatlesrockband",
+  "version-string": "1.0.0",
+  "builtin-baseline": "c4c072aa5c128adf3f63715e03ba707f81b5b8e5",
+  "dependencies": [
+    {
+      "name": "ffmpeg",
+      "default-features": false,
+      "features": ["avcodec"]
+    }
+  ]
+}

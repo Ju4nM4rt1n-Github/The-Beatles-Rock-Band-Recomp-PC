@@ -1,0 +1,78 @@
+# beatlesrockband - ReXGlue Recompiled Project
+#
+# Stable SDK integration lives in cmake/ReXGlue.cmake.
+
+cmake_minimum_required(VERSION 3.25)
+project(beatlesrockband LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+include(cmake/ReXGlue.cmake)
+
+# Sources
+set(BEATLESROCKBAND_SOURCES
+    src/main.cpp
+    src/math_compat.cpp
+    src/guitar_input.cpp
+    src/input_lock.cpp
+    src/network_compat.cpp
+    src/file_trace.cpp
+    src/song_trace.cpp
+    src/parts_trace.cpp
+    src/random_compat.cpp
+    src/audio_timing.cpp
+    src/audio_trace.cpp
+    src/ac3_encoder.cpp
+    src/windows_ac3_output.cpp
+    src/windows_audio.cpp
+    src/precise_sleep.cpp
+    src/refill_trace.cpp
+    src/audio_pacing.cpp
+    src/frame_trace.cpp
+    src/gpu_wait.cpp
+    src/physical_input.cpp
+    src/microphone_probe.cpp
+)
+
+if(WIN32)
+    add_executable(beatlesrockband WIN32 ${BEATLESROCKBAND_SOURCES})
+else()
+    add_executable(beatlesrockband ${BEATLESROCKBAND_SOURCES})
+endif()
+
+rexglue_setup_target(beatlesrockband GPU_PLUGINS xenos)
+
+if(WIN32)
+    target_link_options(beatlesrockband PRIVATE /DEBUG /OPT:REF /OPT:ICF)
+endif()
+
+set_target_properties(beatlesrockband PROPERTIES OUTPUT_NAME "beatlesrockband-guitar")
+
+target_link_libraries(beatlesrockband PRIVATE bcrypt synchronization xaudio2 ole32 winmm uuid)
+find_package(FFMPEG REQUIRED)
+target_include_directories(beatlesrockband PRIVATE ${FFMPEG_INCLUDE_DIRS})
+target_link_directories(beatlesrockband PRIVATE ${FFMPEG_LIBRARY_DIRS})
+target_link_libraries(beatlesrockband PRIVATE ${FFMPEG_LIBRARIES})
+add_library(beatles-input SHARED src/controller_bridge.cpp)
+target_link_libraries(beatles-input PRIVATE SDL3::SDL3-static)
+target_compile_definitions(beatles-input PRIVATE NOMINMAX WIN32_LEAN_AND_MEAN)
+target_link_libraries(beatlesrockband PRIVATE beatles-input)
+
+add_executable(beatles-content src/content_import.cpp)
+target_link_libraries(beatles-content PRIVATE rex::runtime)
+target_compile_definitions(beatles-content PRIVATE NOMINMAX WIN32_LEAN_AND_MEAN)
+
+option(BEATLES_BUILD_AUDIO_TESTS "Build native Windows audio lifecycle tests" OFF)
+option(BEATLES_BUILD_DLC_TESTS "Build plaintext custom song catalog checks" OFF)
+if(BEATLES_BUILD_DLC_TESTS)
+    add_executable(dlc-catalog-tests tests/DlcCatalogTests.cpp)
+endif()
+if(BEATLES_BUILD_AUDIO_TESTS AND WIN32)
+    add_executable(windows-audio-tests tests/WindowsAudioTests.cpp)
+    target_sources(windows-audio-tests PRIVATE src/ac3_encoder.cpp src/windows_ac3_output.cpp)
+    target_include_directories(windows-audio-tests PRIVATE ${FFMPEG_INCLUDE_DIRS})
+    target_link_directories(windows-audio-tests PRIVATE ${FFMPEG_LIBRARY_DIRS})
+    target_link_libraries(windows-audio-tests PRIVATE rex::runtime xaudio2 ole32 winmm mfplat mfuuid ${FFMPEG_LIBRARIES})
+    target_compile_definitions(windows-audio-tests PRIVATE NOMINMAX WIN32_LEAN_AND_MEAN)
+endif()
