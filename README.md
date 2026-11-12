@@ -37,6 +37,10 @@ It builds upon the original work by **Mercurialw0rld**, with additional developm
 
 ## Screenshots
 
+<img width="1919" height="1078" alt="image" src="https://github.com/user-attachments/assets/1952ba01-1133-4e33-98f3-cea27f4a3671" />
+
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/4316e1d4-5f83-4f1c-aaf8-801a0ef2c170" />
+
 <!-- Add actual in-game screenshots here once uploaded to the repository. -->
 
 ## System Requirements
@@ -57,15 +61,13 @@ A legally obtained copy of the original game data is required.
 
 No original game files, copyrighted music or proprietary assets are included in this repository.
 
-1. Obtain the project build through the available distribution channel.
+1. Obtain the project build through the releases section.
 2. Extract the application files.
 3. Provide your own legally obtained game data.
 4. Launch the application.
 5. Configure graphics, audio and input settings.
 
 For installation assistance, see the [installation video](https://www.youtube.com/watch?v=4QnA58zQAQA).
-
-> A public downloadable release package is not currently listed in this repository.
 
 ## Known Issues
 
@@ -84,7 +86,7 @@ Vocal input latency may be noticeable depending on the microphone and audio devi
 </details>
 
 <details>
-<summary><strong>Dolby Digital 5.1</strong></summary>
+<summary><strong>Dolby Digital</strong></summary>
 
 HDMI Dolby Digital output is experimental and requires compatible audio hardware and receiver configuration.
 </details>
