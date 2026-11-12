@@ -1,98 +1,132 @@
 <img width="1100" height="500" alt="The Beatles: Rock Band PC recompilation banner" src="https://github.com/user-attachments/assets/38116ea6-d1b3-4f14-9774-4cec3e1f893a" />
 
-# The Beatles: Rock Band — Recompilation
+# The Beatles: Rock Band — Native PC Port
 
-A recompilation of **The Beatles: Rock Band**, reconstructed from the original game binary into readable, buildable source code, running natively on Windows x64 (Direct3D 12).
+<p align="center">
+  An unofficial native Windows PC port of <strong>The Beatles: Rock Band</strong>, based on the original Xbox 360 version and the ReXGlue recompilation project.
+</p>
 
-Guitar, bass, drums and vocals work, and the game can be played from start to finish. A few features are still experimental; see [Known Issues](#known-issues).
+<p align="center">
+  <img src="https://img.shields.io/badge/Platform-Windows%20x64-blue?style=flat-square" />
+  <img src="https://img.shields.io/badge/Graphics-Direct3D%2012-orange?style=flat-square" />
+  <img src="https://img.shields.io/badge/Status-Active%20Development-success?style=flat-square" />
+</p>
 
-## Credits
+---
 
-This version is based on the original project by **Mercurialw0rld**: [thebeatlesrockband-pcport](https://github.com/mercurialw0rld/thebeatlesrockband-pcport). Thank you, Mercurialw0rld, for this recomp!
+## About the Project
 
-This version was made with *VibeCoding*. I'm not an expert, just a videogame fan, and this is my little contribution to all of us gamers.
+This project brings *The Beatles: Rock Band* to Windows PC through native recompilation, aiming to preserve the original gameplay experience while introducing PC-specific improvements.
+
+It builds upon the original work by **Mercurialw0rld**, with additional development, compatibility improvements and features.
 
 ## Features
 
-- **Instrument support**: guitar, bass, and drums with note detection, timing, and scoring.
-- **Microphone support**: vocal input with pitch detection and harmony scoring for the three-part vocal sections.
-- **Gameplay**: Story Mode, Quickplay, and multiplayer.
-- **Graphics options** (V1.2.2): resolutions up to 2560x1440, Low/Medium/High presets, internal scaler, anisotropic filtering, VSync, and anti-aliasing.
-- **Dolby Digital 5.1 over HDMI** (experimental), enabled from the launcher.
-- **Readable source code**: easy to browse, build, and extend.
+| Feature | Status |
+|---|---|
+| Guitar gameplay | Working |
+| Bass gameplay | Working |
+| Drum gameplay | Working |
+| Microphone and vocal pitch detection | Working |
+| Three-part vocal harmonies | Working |
+| Story Mode | Working |
+| Quickplay | Working |
+| Multiplayer | Working |
+| Graphics configuration | Available |
+| Dolby Digital 5.1 over HDMI | Experimental |
+
+## Screenshots
+
+<!-- Add actual in-game screenshots here once uploaded to the repository. -->
 
 ## System Requirements
 
 | Component | Minimum | Recommended |
-|-----------|---------|-------------|
-| **OS** | 64-bit Windows 10/11 | 64-bit Windows 11 |
-| **Processor** | Intel Core i5 8th gen or AMD Ryzen 5 2600 | Intel Core i5 10th gen or AMD Ryzen 5 3600, or better |
-| **RAM** | 8 GB | 16 GB |
-| **Graphics** | NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 (Direct3D 12 compatible) | NVIDIA GeForce GTX 1660 / RTX 2060 or AMD Radeon RX 6600, or better |
-| **Storage** | Disk with enough free space | SSD recommended |
+|---|---|---|
+| Operating System | Windows 10/11 64-bit | Windows 11 64-bit |
+| Processor | Intel Core i5 8th Gen / Ryzen 5 2600 | Intel Core i5 10th Gen / Ryzen 5 3600 |
+| Memory | 8 GB RAM | 16 GB RAM |
+| Graphics | GTX 1050 Ti / RX 570 | GTX 1660 / RTX 2060 / RX 6600 |
+| Storage | Sufficient free disk space | SSD recommended |
 
-> The port was tested on an RTX 3050 Laptop. The graphics cards listed are approximate examples; performance also depends on the processor, resolution, and song.
+Direct3D 12 compatibility is required. Performance may vary depending on hardware, resolution and the selected song.
 
-## Installation (players)
+## Installation
 
-You need your own legally obtained copy of the game's data. No game files are included in this repository or in the releases.
+A legally obtained copy of the original game data is required.
 
-1. Download the latest portable `.zip` from the [Releases](../../releases) page and extract it to a folder of your choice.
-2. Provide your own legally obtained copy of the game's data files, as shown in the installation video.
-3. Run the launcher to configure graphics, audio and input.
-4. Click **Play** to start the game.
+No original game files, copyrighted music or proprietary assets are included in this repository.
 
-Need help? Watch the [installation video](https://youtu.be/4QnA58zQAQA).
+1. Obtain the project build through the available distribution channel.
+2. Extract the application files.
+3. Provide your own legally obtained game data.
+4. Launch the application.
+5. Configure graphics, audio and input settings.
 
-## Dolby Digital (Experimental)
+For installation assistance, see the [installation video](https://www.youtube.com/watch?v=4QnA58zQAQA).
 
-To use it, you need:
-
-- An HDMI audio output whose driver and device support Dolby Digital/AC-3 at 48 kHz.
-- A TV or receiver that can receive AC-3 over HDMI and pass it on to the sound system. If the connection uses ARC, the TV must allow Dolby Digital passthrough.
-- **Dolby Digital (Experimental)** enabled in the launcher.
-
-## Status
-
-| Component | Status |
-|-----------|--------|
-| Guitar / Bass | ✅ Working |
-| Drums | ✅ Working |
-| Vocals / Mic | ✅ Working (latency can be noticeable, see Known Issues) |
-| Audio | ✅ Working |
-| Dolby Digital 5.1 (HDMI) | 🧪 Experimental |
-| Menus & UI | ✅ Working |
-| Full playthrough | ✅ Working |
+> A public downloadable release package is not currently listed in this repository.
 
 ## Known Issues
 
-- **Frame rate:** the launcher accepts refresh rates up to 144 Hz, but above **75 FPS** the game runs at double speed and some animations break. Cap it at 75 FPS or lower.
-- **Microphone latency:** vocal input can have noticeable latency on some microphones and audio devices. Improving this is planned.
+<details>
+<summary><strong>Frame rate and gameplay speed</strong></summary>
 
-Found something else? Please [open an issue](../../issues) and include your Windows version, GPU, and the version of the port you are using.
+The game currently has a timing issue above 75 FPS. Running at higher frame rates can cause gameplay to run at double speed and break certain animations.
 
-## Building
+**Workaround:** Limit the frame rate to 75 FPS or lower.
+</details>
 
-1. Clone the repository:
+<details>
+<summary><strong>Microphone latency</strong></summary>
 
-   ```
-   git clone https://github.com/Ju4nM4rt1n-Github/The-Beatles-Rock-Band-Recomp-PC.git
-   cd The-Beatles-Rock-Band-Recomp-PC
-   ```
+Vocal input latency may be noticeable depending on the microphone and audio device being used. Further improvements are planned.
+</details>
 
-2. Provide your own legally obtained copy of the game's data files.
-3. Follow the steps in [BUILDING.md](BUILDING.md).
+<details>
+<summary><strong>Dolby Digital 5.1</strong></summary>
 
-## Legal Notice
+HDMI Dolby Digital output is experimental and requires compatible audio hardware and receiver configuration.
+</details>
 
-This project contains **no copyrighted assets**. No game data, audio, charts, or artwork are included or distributed. You must supply your own legally obtained copy of the game to use this project.
+## Building from Source
 
-This project is not affiliated with, endorsed by, or sponsored by Harmonix, MTV Games, Apple Corps Ltd., or any related rights holders. All trademarks belong to their respective owners.
+Developers interested in compiling the project should start with:
+
+- [BUILDING.md](BUILDING.md) — Build instructions.
+- [VALIDATION.md](VALIDATION.md) — Validation and testing procedures.
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Ju4nM4rt1n-Github/The-Beatles-Rock-Band-Recomp-PC.git
+cd The-Beatles-Rock-Band-Recomp-PC
+```
+
+Follow the instructions in `BUILDING.md` for the required dependencies and compilation process.
+
+## Credits
+
+This project is based on the original recompilation work by **[Mercurialw0rld](https://github.com/Mercurialw0rld)**.
+
+Additional development and improvements are maintained by **Ju4nM4rt1n-Github**.
+
+Special thanks to the original developers and contributors whose work made this project possible.
+
+## Legal Disclaimer
+
+This is an independent community project. It is not affiliated with, endorsed by or sponsored by Harmonix, MTV Games, Electronic Arts, Apple Corps Ltd. or The Beatles.
+
+All trademarks and copyrighted materials belong to their respective owners.
+
+Users must provide their own legally obtained copy of the original game.
 
 ## Contributing
 
-Contributions are welcome. Please [open an issue](../../issues) to discuss major changes before submitting a pull request.
+Contributions, bug reports and suggestions are welcome.
+
+Please open an [Issue](../../issues) before submitting major changes.
 
 ## License
 
-Game assets remain the property of their respective owners. Please use an original copy of the game to play.
+See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and the `licenses/` directory for third-party licensing information.
