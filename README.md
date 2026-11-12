@@ -1,14 +1,14 @@
 <img width="1100" height="500" alt="The Beatles: Rock Band PC recompilation banner" src="https://github.com/user-attachments/assets/38116ea6-d1b3-4f14-9774-4cec3e1f893a" />
 
-# The Beatles: Rock Band — Decompilation
+# The Beatles: Rock Band — Recompilation
 
-A decompilation of **The Beatles: Rock Band**, reconstructed from the original game binary into readable, buildable source code, running natively on Windows x64 (Direct3D 12).
+A recompilation of **The Beatles: Rock Band**, reconstructed from the original game binary into readable, buildable source code, running natively on Windows x64 (Direct3D 12).
 
 Guitar, bass, drums and vocals work, and the game can be played from start to finish. A few features are still experimental; see [Known Issues](#known-issues).
 
 ## Credits
 
-This version is based on the original project by **Mercurialw0rld**: [thebeatlesrockband-pcport](https://github.com/mercurialw0rld/thebeatlesrockband-pcport). Thank you, Mercurialw0rld, for this decomp!
+This version is based on the original project by **Mercurialw0rld**: [thebeatlesrockband-pcport](https://github.com/mercurialw0rld/thebeatlesrockband-pcport). Thank you, Mercurialw0rld, for this recomp!
 
 This version was made with *VibeCoding*. I'm not an expert, just a videogame fan, and this is my little contribution to all of us gamers.
 
