@@ -27,13 +27,11 @@ It builds upon the original work by **Mercurialw0rld**, with additional developm
 | Guitar gameplay | Working |
 | Bass gameplay | Working |
 | Drum gameplay | Working |
-| Microphone and vocal pitch detection | Working |
-| Three-part vocal harmonies | Working |
+| Microphone and vocal pitch detection | Working* (Read common issues)| 
 | Story Mode | Working |
 | Quickplay | Working |
 | Multiplayer | Working |
-| Graphics configuration | Available |
-| Dolby Digital 5.1 over HDMI | Experimental |
+| Dolby Digital | Experimental |
 
 ## Screenshots
 
@@ -80,9 +78,11 @@ The game currently has a timing issue above 75 FPS. Running at higher frame rate
 </details>
 
 <details>
-<summary><strong>Microphone latency</strong></summary>
+<summary><strong>Microphone latency*</strong></summary>
 
-Vocal input latency may be noticeable depending on the microphone and audio device being used. Further improvements are planned.
+Vocal input latency may be noticeable depending on the microphone and audio device being used. Thats because, translating low-level Xbox 360 audio/USB calls through Windows mixer buffers introduces unavoidable I/O latency. Since this relies on statically recompiled binaries, a root-level fix requires deep reverse engineering of the real-time DSP pipeline, **though we will work on minimizing this delay in future updates.**
+
+For the moment, i recommend playing Vocals on Easy with a low gain (you can change it in the options) so it's playable and not frustrating—at least for now.
 </details>
 
 <details>
