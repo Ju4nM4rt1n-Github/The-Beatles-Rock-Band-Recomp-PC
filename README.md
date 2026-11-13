@@ -111,7 +111,7 @@ Follow the instructions in `BUILDING.md` for the required dependencies and compi
 
 This project is based on the original recompilation work by **[Mercurialw0rld](https://github.com/Mercurialw0rld)**.
 
-Additional development and improvements are maintained by **Ju4nM4rt1n-Github**.
+Additional development and improvements are maintained by **Juanmaisbored**.
 
 Special thanks to the original developers and contributors whose work made this project possible.
 
