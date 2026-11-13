@@ -27,11 +27,11 @@ It builds upon the original work by **Mercurialw0rld**, with additional developm
 | Guitar gameplay | Working |
 | Bass gameplay | Working |
 | Drum gameplay | Working |
-| Microphone and vocal pitch detection | Working* (Read common issues)| 
+| Microphone and vocal pitch detection | Working (Read known issues)| 
 | Story Mode | Working |
 | Quickplay | Working |
 | Multiplayer | Working |
-| Dolby Digital | Experimental |
+| Dolby Digital | Working (Read known issues) |
 
 ## Screenshots
 
@@ -53,6 +53,8 @@ It builds upon the original work by **Mercurialw0rld**, with additional developm
 
 Direct3D 12 compatibility is required. Performance may vary depending on hardware, resolution and the selected song.
 
+To play with Dolby Digital, you must have a compatible audio system connected via HDMI.
+
 ## Installation
 
 A legally obtained copy of the original game data is required.
@@ -70,25 +72,33 @@ For installation assistance, see the [installation video](https://www.youtube.co
 ## Known Issues
 
 <details>
-<summary><strong>Frame rate and gameplay speed</strong></summary>
+<summary><strong>First-start crashes</strong></summary>
 
-The game currently has a timing issue above 75 FPS. Running at higher frame rates can cause gameplay to run at double speed and break certain animations.
-
-**Workaround:** Limit the frame rate to 75 FPS or lower.
+Random crashes may intermittently occur on the main menu (likely related to runtime shader compilation); waiting a few seconds or restarting the client typically resolves this.
+We will continue running stability tests to mitigate and fix this behavior in future updates.
 </details>
 
 <details>
-<summary><strong>Microphone latency*</strong></summary>
+<summary><strong>Frame rate and gameplay speed</strong></summary>
+
+The game currently has a timing issue above 60 FPS. Running at higher frame rates can cause gameplay to run at double speed and break certain animations.
+
+**Workaround:** Limit the frame rate to 60 FPS or lower.
+</details>
+
+<details>
+<summary><strong>Microphone latency</strong></summary>
 
 Vocal input latency may be noticeable depending on the microphone and audio device being used. Thats because, translating low-level Xbox 360 audio/USB calls through Windows mixer buffers introduces unavoidable I/O latency. Since this relies on statically recompiled binaries, a root-level fix requires deep reverse engineering of the real-time DSP pipeline, **though we will work on minimizing this delay in future updates.**
 
-For the moment, i recommend playing Vocals on Easy with a low gain (you can change it in the options) so it's playable and not frustrating—at least for now.
+**Workaround:** For the moment, i recommend playing Vocals on Easy with a low gain (you can change it in the options) so it's playable and not frustrating—at least for now.
 </details>
 
 <details>
 <summary><strong>Dolby Digital</strong></summary>
-
-HDMI Dolby Digital output is experimental and requires compatible audio hardware and receiver configuration.
+The game automatically crashes when Dolby Digital is enabled if an active HDMI output supporting Dolby Audio / Atmos / Digital is not detected on the system.
+  
+**Workaround:** To fix this, set the audio output to PCM / Stereo by disabling the Dolby Digital option in the launcher before starting the game.
 </details>
 
 ## Building from Source
